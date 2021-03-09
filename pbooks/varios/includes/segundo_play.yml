@@ -1,0 +1,5 @@
+- hosts: webservers
+  become: True
+  tasks:
+    - name: Instalar lftp
+      apt: name=lftp state=latest

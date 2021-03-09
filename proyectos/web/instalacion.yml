@@ -1,0 +1,6 @@
+- name: PlayBook de pruebas www.carlosof.com
+  hosts: webservers
+  remote_user: root
+  become: true
+  roles:
+    - { role: apache2 }

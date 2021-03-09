@@ -1,0 +1,9 @@
+---
+- name: Copiar ficheros /etc/hosts a los servidores Linux
+  hosts: webservers
+  remote_user: root
+  become: True -- a nivel playbook
+  tasks:
+    - name: copiar /etc/hosts
+      copy: src=/etc/hosts dest=/etc/hosts2
+        
